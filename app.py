@@ -49,7 +49,7 @@ def edit_transaction(transaction_id):
                 transaction["aount"] = amount
                 break
         # redirect to the transactions list page after updating the transaction
-        return redirect(url_for("get_transations"))
+        return redirect(url_for("get_transactions"))
     # if request is GET, find the transaction with matching ID and render the edit form
     for transaction in transactions:
         if transaction["id"] == transaction_id:
