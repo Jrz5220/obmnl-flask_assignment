@@ -30,7 +30,7 @@ def add_transaction():
             'amount': float(request.form['amount'])
         }
         transactions.append(transaction)
-        return redirect(url_for("get_transaction"))
+        return redirect(url_for("get_transactions"))
     # if the request is GET, render the form template
     return render_template("form.html")
 
@@ -66,7 +66,7 @@ def delete_transaction(transaction_id):
         if transaction["id"] == transaction_id:
             transactions.remove(transaction)
             break
-    return redirect(url_for("get_transaction"))
+    return redirect(url_for("get_transactions"))
 
 # check if the current script is the main program
 if __name__ == "__main__":
