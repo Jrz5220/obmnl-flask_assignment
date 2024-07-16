@@ -25,8 +25,8 @@ def add_transaction():
     if request.method == "POST":
         # create a new transaction object
         transation = {
-            'id': len(transactions)+1
-            'date': request.form['date']
+            'id': len(transactions)+1,
+            'date': request.form['date'],
             'amount': float(request.form['amount'])
         }
         transactions.append(transaction)
@@ -69,7 +69,7 @@ def delete_transaction(transaction_id):
     return redirect(url_for("get_transaction"))
 
 # check if the current script is the main program
-if __name__ = "__main__":
+if __name__ == "__main__":
     # Run the Flask app with debug enabled to view detailed error messages in the browser
     app.run(debug=True)
 
