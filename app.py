@@ -46,7 +46,7 @@ def edit_transaction(transaction_id):
         for transaction in transactions:
             if transaction["id"] == transaction_id:
                 transaction["date"] = date
-                transaction["aount"] = amount
+                transaction["amount"] = amount
                 break
         # redirect to the transactions list page after updating the transaction
         return redirect(url_for("get_transactions"))
